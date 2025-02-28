@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'FuturaPT', Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    background: url("../assets/images/hero.jpg") center/cover no-repeat;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --gold: #ffd700;
+}
