@@ -10,14 +10,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
 
-
-
   <link rel="stylesheet" href="css/font-family.css">
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/eventstype.css">
+  <link rel="stylesheet" href="css/my-features.css">
+  <link rel="stylesheet" href="css/concept.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/packages.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -39,56 +46,15 @@
             <li><a href="#">ЦЕНЫ</a></li>
             <li><a href="#">ОТЗЫВЫ</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
-            <img class="info-burger" src="assets/icons/menu.png" alt="Меню">
           </ul>
         </nav>
-        <!-- Мобильный бургер, показывается только в мобильной версии -->
         <button class="burger">
           <img src="assets/icons/menu.png" alt="Меню">
         </button>
       </div>
     </div>
   </header>
-  <!-- Инфоменю (выезжает слева, для десктоп/планшет) -->
-  <div class="info-modal">
-    <div class="info-modal-content">
-      <div class="info-content">
-        <div class="close-h2-div">
-          <h2>Информация</h2>
-          <img class="info-close" src="assets/icons/close.png">
-        </div>
-        <p style="margin-bottom: 15px;">Сергей Агафонов.</p>
-        <p>Ведущий мероприятий и организатор красивых свадебных событий, ярких корпоративных мероприятий, стильных
-          enent-проектов, и уютных юбилеев. Веду мероприятия на особом вайбе. Знаю, как сделать так, чтобы зашло.
-          Регулярно прокачиваю скиллы в академии Сократа.</p>
-        <div class="info-experience">
-          <p><strong>Опыт 12+ лет</strong></p>
-          <a href="#" class="learn-more">Узнать подробнее</a>
-          <a href="#" class="ask-question">ЗАДАТЬ ВОПРОС</a>
-        </div>
-        <div class="contact-info">
-          <h3 style="margin-bottom: 15px;">Где и Когда?</h3>
-          <div>
-            <img src="assets/icons/calendar.png">
-            <p>Каждый день 24/7</p>
-          </div>
-          <div>
-            <img src="assets/icons/location.png">
-            <p>г. Москва</p>
-          </div>
-          <div>
-            <img src="assets/icons/phone.png">
-            <p>8 969 085 69 69</p>
-          </div>
-          <div>
-            <img src="assets/icons/email.png">
-            <p>info@agafonovwedd.ru</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Мобильное меню (выезжает справа, под header) -->
+
   <div class="modal-menu">
     <div class="modal-content">
       <nav class="mobile-nav">
@@ -105,11 +71,7 @@
     </div>
   </div>
 
-
-
-
-  <!-- HERO -->
-  <div class="hero-section">
+  <!-- <div class="hero-section">
     <div class="hero-content">
       <div class="hero-text">
         <h2 class="name">СЕРГЕЙ АГАФОНОВ</h2>
@@ -121,14 +83,9 @@
         <button class="cta-button">Узнать, свободна ли дата</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
-
-
-
-
-
-  <section class="event-section">
+  <!-- <section class="event-section">
     <h1 class="event-title">ВИДЫ МЕРОПРИЯТИЙ</h1>
     <div class="event-types">
         <div class="event-type">Презентации</div>
@@ -139,18 +96,606 @@
         <div class="event-type">Квесты</div>
     </div>
     <button class="apply-button">ОСТАВИТЬ ЗАЯВКУ</button>
-</section>
+</section> -->
+
+
+  <section class="my-features">
+    <div class="container">
+      <h2>Мои фишки</h2>
+      <div class="features-wrap">
+        <div class="column">
+          <div class="feature-item">
+            <div class="icon">
+              <img src="assets/images/my-features/fiwka5.png" alt="">
+            </div>
+            <h3>
+              ЧЕЛОВЕК ИЩЕТ ЧЕЛОВЕКА
+              <div class="question-wrap">
+                <button class="my-modal-btn" data-target="#myModal1">?</button>
+                <div class="my-popup" id="myModal1">
+                  <span class="my-popup-close">&times;</span>
+                  <h4>Человек ищет человека**</h4>
+                  <p>Мой творческий путь начался с работы официантом, где я впервые ощутил магию общения с людьми.
+                    Поступая в театральный вуз, я искал свое место на сцене, но вскоре понял, что моя настоящая сцена —
+                    это свадьбы, где я могу создавать незабываемые моменты для влюбленных.</p>
+                  <p>Сегодня в моем портфолио более 500 счастливых семейных историй, каждая из которых уникальна и
+                    наполнена эмоциями. Я прошел путь подготовки к свадьбе, и теперь для меня идеальная свадьба — это не
+                    просто событие, а состояние комфорта, которое я стремлюсь создать для каждой пары.</p>
+                  <p>Работа для меня — это не просто профессия, а настоящее счастье. Это возможность встречаться с
+                    новыми людьми, делиться их радостью и реализовывать свой творческий потенциал. Я обожаю рассказывать
+                    о своих увлечениях и жизни за чашечкой горячего напитка, ведь именно в таких моментах рождаются
+                    самые интересные идеи и вдохновение.</p>
+                  <p>Давайте встретимся и обсудим, как сделать ваш день особенным!</p>
+                </div>
+              </div>
+            </h3>
+            <p>Нажмите, чтобы узнать подробнее обо мне</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <img src="assets/images/my-features/fiwka4.png" alt="">
+            </div>
+            <h3>Персонализация программы</h3>
+            <p>Вызовем интерес программой у всех от маленьких детей до старшего поколения. Программа про пару и гостей
+              вечера.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <img src="assets/images/my-features/fiwka3.png" alt="">
+            </div>
+            <h3>Строгий отбор в команду</h3>
+            <p>Ведущий 50 % успеха программы, а диджей, администратор, креативная команда еще 50%. Принимаю специалистов
+              искренне влюблённых в свою профессию, зарекомендовавших себя на самых топовых мероприятиях.</p>
+          </div>
+        </div>
+        <div class="center-photo">
+          <img src="assets/images/my-features/sergey.png" alt="Sergey">
+          <div class="experience-badge">
+            <div class="top"><img src="assets/images/my-features/event-top.svg" alt=""></div>
+            <div class="bottom">В EVENT сфере</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="feature-item">
+            <div class="icon">
+              <img src="assets/images/my-features/fiwka2.png" alt="">
+            </div>
+            <h3>
+              ВХОЖУ В ТОП 10
+              <div class="question-wrap">
+                <button class="my-modal-btn" data-target="#myModal2">?</button>
+                <div class="my-popup" id="myModal2">
+                  <span class="my-popup-close">&times;</span>
+                  <h4>Вхожу в ТОП 10</h4>
+                  <p>1. Топ 10 Российского клуба ведущих</p>
+                  <p>2. Победитель премии TOP PEOPLE AWARDS в номинации "Лучший ведущий 2021 года"</p>
+                  <p>3. Победитель международной премии NUMBER ONE AWARDS в номинации "Лучший шоумен"</p>
+                  <p>4. Лучший ведущий по мнению WED.EXPERT 2020г</p>
+                </div>
+              </div>
+            </h3>
+            <p>При нажатии узнаете мои достижения</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <img src="assets/images/my-features/fiwka1.png" alt="">
+            </div>
+            <h3>ДРЕСС-КОД КОМАНДЫ</h3>
+            <p>Каждый член команды будет одет под стиль вашего мероприятия.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">
+              <img src="assets/images/my-features/fiwka6.png" alt="">
+            </div>
+            <h3>Внимание к деталям</h3>
+            <p>Интересные интерактивы и грамотно выстроенная концепция, все будут на одной волне. Для меня не бывает
+              мелочей даже если придется помочь с расстановкой столов или другими вопросами.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept-section">
+    <div class="container">
+      <div class="concept-header">
+        <h2>Индивидуальная концепция мероприятия</h2>
+        <p>Сделает ваше событие незабываемым</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <img src="assets/images/concept/contact-form.png" alt="Шаг 1">
+          </div>
+          <div class="step-content">
+            <h3>Заполняем и обсуждаем бриф</h3>
+            <p>Знакомимся с концепцией, выделяем ключевые моменты и направление будущего мероприятия.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <img src="assets/images/concept/creative.png" alt="Шаг 2">
+          </div>
+          <div class="step-content">
+            <h3>Определяем цели и задачи</h3>
+            <p>Разрабатываем концепцию и формируем ключевые элементы, чтобы добиться нужного результата.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <img src="assets/images/concept/goal.png" alt="Шаг 3">
+          </div>
+          <div class="step-content">
+            <h3>Визуализируем через презентацию</h3>
+            <p>Готовим наглядные материалы, отражающие все идеи и сценарий будущего события.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-icon">
+            <img src="assets/images/concept/success.png" alt="Шаг 4">
+          </div>
+          <div class="step-content">
+            <h3>Утверждаем и готовимся</h3>
+            <p>Финализируем детали, распределяем роли и делаем все, чтобы ваше мероприятие прошло безупречно.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wedding-services-section">
+    <div class="wedding-background-elements">
+      <div class="wedding-bg-circle wedding-bg-circle-1"></div>
+      <div class="wedding-bg-circle wedding-bg-circle-2"></div>
+      <div class="wedding-bg-circle wedding-bg-circle-3"></div>
+      <div class="wedding-bg-circle wedding-bg-circle-4"></div>
+
+      <div class="wedding-floating-heart" style="top: 10%; left: 20%;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
+            fill="#f8bbd0" fill-opacity="0.3" />
+        </svg>
+      </div>
+      <div class="wedding-floating-heart" style="top: 15%; right: 25%;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
+            fill="#f8bbd0" fill-opacity="0.3" />
+        </svg>
+      </div>
+      <div class="wedding-floating-heart" style="bottom: 20%; left: 30%;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
+            fill="#f8bbd0" fill-opacity="0.3" />
+        </svg>
+      </div>
+      <div class="wedding-floating-heart" style="bottom: 35%; right: 15%;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
+            fill="#f8bbd0" fill-opacity="0.3" />
+        </svg>
+      </div>
+
+      <div class="wedding-flower wedding-flower-1"></div>
+      <div class="wedding-flower wedding-flower-2"></div>
+      <div class="wedding-flower wedding-flower-3"></div>
+      <div class="wedding-flower wedding-flower-4"></div>
+    </div>
+
+    <div class="wedding-services-pricing">
+      <div class="wedding-container">
+        <div class="wedding-header-container">
+          <h2 class="wedding-section-title">Стоимость услуг</h2>
+          <div class="wedding-title-decoration">
+            <span class="wedding-title-line"></span>
+            <span class="wedding-title-dot"></span>
+            <span class="wedding-title-line"></span>
+          </div>
+          <p class="wedding-section-subtitle">Создайте незабываемое торжество с нашими профессиональными услугами для
+            вашего особенного дня</p>
+        </div>
+
+        <div class="wedding-services-list" id="wedding-services-list">
+          <!-- Services will be added here by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <div class="wedding-ribbon-decoration wedding-ribbon-left"></div>
+    <div class="wedding-ribbon-decoration wedding-ribbon-right"></div>
+  </section>
+
+  <section class="packages-section">
+    <div class="container">
+      <h2>Выберите готовый пакет</h2>
+      <div class="packages-wrap">
+        <div class="package-item">
+          <div class="package-content">
+            <div class="package-header">
+              <h3>Базовый</h3>
+              <div class="price">от 150 000 руб.</div>
+            </div>
+            <ul class="package-list">
+              <li>Ведущий</li>
+              <li>Сценарий и подготовка</li>
+              <li>Фото и видеосъёмка</li>
+              <li>DJ + аппаратура</li>
+              <li>Оформление зала</li>
+              <li>Конкурсы с призами</li>
+            </ul>
+          </div>
+          <button class="package-btn">Заказать</button>
+        </div>
+        <div class="package-item popular">
+          <span class="popular-badge">Популярный</span>
+          <div class="package-content">
+            <div class="package-header">
+              <h3>Выгодный</h3>
+              <div class="price">от 250 000 руб.</div>
+            </div>
+            <ul class="package-list">
+              <li>Ведущий</li>
+              <li>Сценарий и подготовка</li>
+              <li>Фото и видеосъёмка</li>
+              <li>DJ + аппаратура</li>
+              <li>Оформление зала</li>
+              <li>Конкурсы с призами</li>
+              <li>Доп. фишка в подарок</li>
+            </ul>
+          </div>
+          <button class="package-btn">Заказать</button>
+        </div>
+        <div class="package-item">
+          <div class="package-content">
+            <div class="package-header">
+              <h3>VIP</h3>
+              <div class="price">от 400 000 руб.</div>
+            </div>
+            <ul class="package-list">
+              <li>Ведущий</li>
+              <li>Сценарий и подготовка</li>
+              <li>Фото и видеосъёмка</li>
+              <li>DJ + аппаратура</li>
+              <li>Оформление зала</li>
+              <li>Конкурсы с призами</li>
+              <li>Премиум-локация</li>
+            </ul>
+          </div>
+          <button class="package-btn">Заказать</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="matrimony-showcase-container">
+      <h1 class="matrimony-showcase-heading">Фотогалерея</h1>
+      <div class="matrimony-image-slider">
+        <div class="slider-visible-area">
+          <div class="slider-content-strip">
+            <!-- Static photos - add or remove photos here manually -->
+            <div class="slider-image-frame" data-position="0">
+              <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Wedding photo 1">
+            </div>
+            <div class="slider-image-frame" data-position="1">
+              <img
+                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                alt="Wedding photo 2">
+            </div>
+            <div class="slider-image-frame" data-position="2">
+              <img
+                src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Wedding photo 3">
+            </div>
+            <div class="slider-image-frame" data-position="3">
+              <img
+                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Wedding photo 4">
+            </div>
+            <div class="slider-image-frame" data-position="4">
+              <img
+                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Wedding photo 5">
+            </div>
+            <div class="slider-image-frame" data-position="5">
+              <img
+                src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                alt="Wedding photo 6">
+            </div>
+          </div>
+        </div>
+        <button class="slider-control-button prev-control">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-control-button next-control">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="slider-navigation-dots"></div>
+      </div>
+    </div>
+  </section>
 
 
 
+  <section class="wed-contact-wrapper">
+    <div class="wed-paper-card">
+      <div class="wed-paper-fold"></div>
+      <div class="wed-wax-seal">
+        <div class="wed-seal-icon" id="ringsIcon"></div>
+      </div>
+
+      <div class="wed-card-content">
+        <!-- Left side - Contact Info -->
+        <div class="wed-info-side">
+          <div class="wed-info-content">
+            <div class="wed-brand">
+              <div class="wed-brand-icon" id="heartIcon"></div>
+              <h1 class="wed-brand-name">Агафоновы</h1>
+            </div>
+
+            <div class="wed-contact-section">
+              <h2 class="wed-section-title">Наши контакты</h2>
+              <ul class="wed-contact-list">
+                <li class="wed-contact-item">
+                  <div class="wed-contact-icon" id="phoneIcon"></div>
+                  <div class="wed-contact-details">
+                    <div class="wed-contact-label">Телефон</div>
+                    <div class="wed-contact-value">+7 (999) 123-45-67</div>
+                  </div>
+                </li>
+                <li class="wed-contact-item">
+                  <div class="wed-contact-icon" id="mailIcon"></div>
+                  <div class="wed-contact-details">
+                    <div class="wed-contact-label">Email</div>
+                    <div class="wed-contact-value">info@agafonovwedding.ru</div>
+                  </div>
+                </li>
+                <li class="wed-contact-item">
+                  <div class="wed-contact-icon" id="mapPinIcon"></div>
+                  <div class="wed-contact-details">
+                    <div class="wed-contact-label">Адрес</div>
+                    <div class="wed-contact-value">143909, Россия, Московская обл. г Балашиха, ул Лукино, д. 55А</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="wed-social-section">
+              <h3 class="wed-section-title">Мы в соцсетях</h3>
+              <div class="wed-social-icons">
+                <a href="#" class="wed-social-icon" id="facebookIcon"></a>
+                <a href="#" class="wed-social-icon" id="instagramIcon"></a>
+              </div>
+              <div class="wed-tagline">С любовью и заботой о вашем особенном дне</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side - Contact Form -->
+        <div class="wed-form-side">
+          <div class="wed-form-header">
+            <h2 class="wed-form-title">Напишите нам</h2>
+            <div class="wed-form-divider"></div>
+            <p class="wed-form-subtitle">Мы будем рады ответить на ваши вопросы</p>
+          </div>
+
+          <form id="contactForm" class="wed-contact-form">
+            <div class="wed-form-group">
+              <label for="name" class="wed-form-label">Имя</label>
+              <div class="wed-input-wrapper">
+                <input type="text" id="name" name="name" class="wed-form-input" placeholder="Ваше имя" required>
+                <div class="wed-input-border"></div>
+              </div>
+            </div>
+
+            <div class="wed-form-group">
+              <label for="email" class="wed-form-label">Email</label>
+              <div class="wed-input-wrapper">
+                <input type="email" id="email" name="email" class="wed-form-input" placeholder="Ваш email" required>
+                <div class="wed-input-border"></div>
+              </div>
+            </div>
+
+            <div class="wed-form-group">
+              <label for="phone" class="wed-form-label">Телефон</label>
+              <div class="wed-input-wrapper">
+                <input type="text" id="phone" name="phone" class="wed-form-input" placeholder="+7 (___) ___-__-__">
+                <div class="wed-input-border"></div>
+              </div>
+            </div>
+
+            <div class="wed-form-group">
+              <label for="message" class="wed-form-label">Сообщение</label>
+              <div class="wed-input-wrapper wed-textarea-wrapper">
+                <textarea id="message" name="message" class="wed-form-textarea" placeholder="Ваше сообщение..."
+                  required></textarea>
+                <div class="wed-input-border"></div>
+              </div>
+            </div>
+
+            <button type="submit" class="wed-form-submit" id="submitButton">
+              <span class="wed-button-content">
+                <span id="sendIcon"></span>
+                <span>Отправить</span>
+              </span>
+              <span class="wed-button-bg"></span>
+            </button>
+          </form>
+
+          <div class="wed-form-footer">
+            <div class="wed-footer-ornament wed-left"></div>
+            <span class="wed-footer-text">Агафонов 2025</span>
+            <div class="wed-footer-ornament wed-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wed-flower-decor wed-top-left"></div>
+    <div class="wed-flower-decor wed-bottom-right"></div>
+
+    <div id="successMessage" class="wed-success-message">
+      <div class="wed-success-content">
+        <span class="wed-success-icon" id="checkIcon"></span>
+        <span>Сообщение успешно отправлено!</span>
+      </div>
+    </div>
+  </section>
 
 
 
+  <footer>
+    <div class="footer-wrapper">
+      <!-- Wedding title section -->
+      <div class="footer-title">
+        <h2>Agafonov Wedding</h2>
+        <p>Организация свадеб с любовью и вниманием к деталям</p>
+      </div>
 
+      <!-- Top section with decorative elements -->
+      <div class="footer-top">
+        <div class="heart-divider">
+          <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="#c1cdcf" stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+            </path>
+          </svg>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+
+      <!-- Main footer content -->
+      <div class="footer-content">
+        <!-- Menu section -->
+        <div class="footer-column">
+          <h3>Меню</h3>
+          <ul>
+            <li><a href="/">Главная страница</a></li>
+            <li><a href="/about">О нас</a></li>
+            <li><a href="/services">Наши услуги</a></li>
+            <li><a href="/prices">Цены на услуги</a></li>
+            <li><a href="/reviews">Отзывы клиентов</a></li>
+            <li><a href="/account">Личный кабинет</a></li>
+            <li><a href="/feedback">Обратная связь</a></li>
+          </ul>
+        </div>
+
+        <!-- Account & Useful links section -->
+        <div class="footer-column">
+          <h3>Аккаунт</h3>
+          <ul class="account-links">
+            <li><a href="/login">Войти</a></li>
+            <li><a href="/register">Регистрация</a></li>
+          </ul>
+
+          <h3>Полезные ссылки</h3>
+          <ul>
+            <li><a href="/payment">Как оплатить?</a></li>
+            <li><a href="/delivery">Доставка</a></li>
+            <li><a href="/privacy">Политика конфиденциальности</a></li>
+            <li><a href="/terms">Договор-оферта</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact section -->
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <ul class="contact-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+7 (999) 123-45-67</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>info@agafonovwedding.ru</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>143909, Россия, Московская обл. г Балашиха, ул Лукино, д. 55А</span>
+            </li>
+          </ul>
+
+          <div class="social-media">
+            <h4>Мы в соцсетях</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company info section -->
+        <div class="footer-column">
+          <h3>О компании</h3>
+          <div class="company-info">
+            <p>ИП АГАФОНОВ СЕРГЕЙ ВЛАДИМИРОВИЧ</p>
+            <p>ИНН 500110552431</p>
+            <p>ОГРНИП 323508100579671</p>
+            <p>Зарегистрирован в Инспекция Федеральной налоговой службы по г.Балашихе Московской области (5001) от
+              25.10.2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom section with copyright -->
+      <div class="footer-bottom">
+        <p class="copyright">2023 © Agafonov Wedding - Ведущий Москва</p>
+        <div class="tagline">
+          <svg class="heart-small" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="#c1cdcf" stroke="#515467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+            </path>
+          </svg>
+          <p>С любовью к каждой свадьбе</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <script defer src="js/hero.js"></script>
+  <script defer src="js/my-features.js"></script>
+  <script defer src="js/gallery.js"></script>
+  <script defer src="js/services.js"></script>
   <script defer src="js/header.js"></script>
+  <script defer src="js/contacts.js"></script>
+  <script defer src="js/footer.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
+    background: url("../assets/images/hero.jpg") center/cover;
 }
 
 .hero-content {
@@ -29,7 +30,7 @@
 .name {
     text-align: center;
     font-size: 55px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 10px;
     white-space: nowrap;
 }
@@ -47,7 +48,7 @@
 
 .hero-event-type {
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 400;
     white-space: nowrap;
     text-align: center;
 }
@@ -97,7 +98,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Media Queries */
 @media (max-width: 1200px) {
     .profession {
         font-size: 120px;
@@ -113,7 +113,6 @@
     }
 }
 
-/* Special handling for screens below 1024px */
 @media (max-width: 1024px) {
     .hero-content {
         flex-direction: column;

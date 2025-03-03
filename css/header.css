@@ -4,9 +4,14 @@
   left: 0;
   width: 100%;
   z-index: 999;
-  /* background-color: #7b7b7b; */
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  background-color: transparent;
 }
+.fixed-header.scrolled {
+  background-color: #fefff6;
+}
+
 
 .header-top {
   display: flex;
@@ -39,12 +44,10 @@
   justify-content: space-between;
 }
 
-/* Логотип */
 .logo {
   height: 70px;
 }
 
-/* Десктоп навигация */
 .desktop-nav ul {
   list-style: none;
   display: flex;
@@ -80,7 +83,6 @@
   width: 100%;
 }
 
-/* Инфо-бургер для десктоп/планшет */
 .info-burger {
   background: transparent;
   border: none;
@@ -94,7 +96,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Мобильный бургер – показывается только в мобильной версии */
 .burger {
   background: transparent;
   border: none;
@@ -108,7 +109,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Инфоменю – модальное окно, выезжает слева, под header */
 .info-modal {
   position: fixed;
   top: 0px;
@@ -219,7 +219,6 @@
   width: 25px;
 }
 
-/* Мобильное меню – модальное окно, выезжает справа, под header */
 .modal-menu {
   position: fixed;
   top: 100px;
@@ -254,7 +253,6 @@
   transform: translateX(0);
 }
 
-/* Сепараторы между ссылками в мобильном меню */
 .mobile-nav ul {
   list-style: none;
   padding: 0;
@@ -282,8 +280,6 @@
   color: #333;
 }
 
-/* Media Queries */
-/* Мобильная версия (макс. 768px) */
 @media (max-width: 1024px) {
   .header-top {
     display: none;
@@ -306,7 +302,6 @@
   }
 }
 
-/* Десктоп/Планшет (минимум 769px) */
 @media (min-width: 1025px) {
   .burger {
     display: none;

@@ -1,0 +1,204 @@
+.my-features {
+    padding: 160px 20px 60px 20px;
+    color: #515467;
+    background: linear-gradient(135deg, #f4f5ef, #c1cdcf);
+    position: relative;
+}
+
+.my-features::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(244,245,239,0.6);
+    z-index: 0;
+}
+
+.my-features .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.my-features h2 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #515467;
+}
+
+.features-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 280px;
+}
+
+.feature-item {
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+}
+
+.feature-item .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #515467;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #515467;
+}
+
+.center-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.center-photo img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.experience-badge {
+    position: relative;
+}
+
+.experience-badge .top {
+    line-height: 1.2;
+}
+
+.experience-badge .top img {
+    max-width: 230px;
+}
+
+.experience-badge .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('../assets/images/my-features/event-bottom.png') center/cover;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+    .features-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 100%;
+        max-width: 500px;
+    }
+    .center-photo {
+        margin: 30px 0;
+    }
+    .center-photo img {
+        width: 100%;
+        max-width: 450px;
+    }
+    .experience-badge {
+        margin-bottom: 10px;
+    }
+}
+
+.question-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.my-modal-btn {
+    cursor: pointer;
+    margin-left: 5px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 6px;
+    background-color: #b4bdc4;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    color: #515467;
+}
+
+.my-popup {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 600px;
+    background: #f4f5ef;
+    padding: 15px 20px;
+    border: 1px solid #b4bdc4;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.my-popup::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: #f4f5ef;
+}
+
+.my-popup h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #515467;
+}
+
+.my-popup p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #515467;
+}
+
+.my-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #515467;
+}
