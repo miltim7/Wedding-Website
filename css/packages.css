@@ -1,183 +1,237 @@
-.packages-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #ffffff, #f7f7f7);
-    color: #333;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    font-family: "Arial", sans-serif;
+:root {
+    --primary-color: #000;
+    --text-color: #333;
+    --gray-light: #f3f4f6;
+    --gray-medium: #9ca3af;
+    --gray-dark: #4b5563;
+    --white: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-.packages-section .container {
-    max-width: 1200px;
+.wedding-packages {
+    max-width: 1280px;
     margin: 0 auto;
 }
 
-.packages-section h2 {
-    color: #333;
+.wedding-packages__title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 50px;
+    color: var(--primary-color) !important;
 }
 
-.packages-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+.wedding-packages__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-.package-item {
-    width: 370px;
-    position: relative;
+.wedding-package-card {
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.wedding-package-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.wedding-package-card__badge {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.wedding-package-card__badge svg {
+    stroke: #fbbf24;
+}
+
+.wedding-package-card__content {
+    padding: 2rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.wedding-package-card__header {
+    display: flex;
     justify-content: space-between;
-    background: #e6e6e6;
-    border-radius: 15px;
-    padding: 40px 20px 30px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.package-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+.wedding-package-card__name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-.package-content {
+.wedding-package-card__duration {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-dark);
+}
+
+.wedding-package-card__price {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.wedding-package-card__features {
+    list-style: none;
+}
+
+.wedding-package-card__feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-dark);
+}
+
+.wedding-package-card__feature svg {
+    flex-shrink: 0;
+    stroke: var(--gray-medium);
+}
+
+.wedding-package-card__additional {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
-.package-header {
-    margin-bottom: 25px;
+.wedding-package-card__additional-content {
+    flex: 1;
 }
 
-.package-header h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
+.wedding-package-card__additional-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
-.package-header .price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #8bc34a;
-}
-
-.package-list {
+.wedding-package-card__additional-list {
     list-style: none;
-    padding: 0;
-    margin: 0 0 30px;
-    text-align: left;
 }
 
-.package-list li {
-    font-size: 1rem;
-    margin: 10px 0;
-    padding-left: 25px;
-    position: relative;
+.wedding-package-card__additional-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--gray-dark);
+    line-height: 1.4;
 }
 
-.package-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #8bc34a;
+.wedding-package-card__additional-item span:first-child {
+    min-width: 0;
 }
 
-.package-btn {
-    background-color: #fddde6;
-    color: #333;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 12px 30px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.3s;
-    text-transform: uppercase;
+.wedding-package-card__additional-item span:last-child {
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.wedding-package-card__footer {
     margin-top: auto;
-    border: 1px solid #a5a5a5;
+    padding-top: 2rem;
 }
 
-.package-btn:hover {
-    background-color: #fbb6c2;
-    transform: scale(1.05);
+.wedding-package-card__note {
+    font-size: 0.75rem;
+    color: var(--gray-medium);
+    margin-bottom: 1rem;
 }
 
-.popular {
-    background: rgba(209, 196, 233, 0.2);
-    border: 2px solid #d1c4e9;
+.wedding-package-card__button {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
-.popular-badge {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    background-color: #d1c4e9;
-    color: #000;
-    padding: 6px 16px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    border-radius: 5px;
-    transform: rotate(20deg);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.wedding-package-card__button:hover {
+    background: #1a1a1a;
+}
+
+.wedding-package-card__button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+    .wedding-packages__grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
-    .packages-section h2 {
+    .wedding-packages__title {
         font-size: 2rem;
-        margin-bottom: 40px;
+        margin-bottom: 2rem;
     }
 
-    .package-item {
-        width: 100%;
-        max-width: 400px;
+    .wedding-package-card {
+        margin-bottom: 2rem;
     }
 
-    .package-header h3 {
-        font-size: 1.3rem;
-    }
-
-    .package-header .price {
-        font-size: 1.8rem;
-    }
-
-    .package-list li {
-        font-size: 0.95rem;
-    }
-
-    .package-btn {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-
-    .popular-badge {
-        font-size: 0.75rem;
-        padding: 5px 14px;
+    .wedding-package-card__additional-item {
+        font-size: 0.8125rem;
     }
 }
 
 @media (max-width: 480px) {
-    .packages-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
+    .wedding-package-card__content,
+    .wedding-package-card__additional {
+        padding: 1.5rem;
     }
 
-    .package-header h3 {
-        font-size: 1.2rem;
-    }
-
-    .package-header .price {
+    .wedding-package-card__price {
         font-size: 1.5rem;
     }
 
-    .package-list li {
-        font-size: 0.9rem;
+    .wedding-package-card__feature,
+    .wedding-package-card__additional-item {
+        font-size: 0.8125rem;
     }
 
-    .package-btn {
-        font-size: 0.85rem;
-        padding: 8px 18px;
+    .wedding-package-card__additional-item {
+        gap: 0.5rem;
+    }
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
     }
 }

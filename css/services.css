@@ -1,6 +1,6 @@
 :root {
     --wedding-color-dark: #515467;
-    --wedding-color-light: #f4f5ef;
+    --wedding-color-light: #fff;
     --wedding-color-accent1: #b4bdc4;
     --wedding-color-accent2: #c1cdcf;
     --wedding-color-pink: #f8bbd0;
@@ -13,7 +13,7 @@
     background: linear-gradient(135deg, var(--wedding-color-light), #e8eae0);
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     overflow: hidden;
 }
 
@@ -34,46 +34,46 @@
 }
 
 .wedding-bg-circle-1 {
-    width: 300px;
-    height: 300px;
-    top: -150px;
-    left: -150px;
-    border-bottom-right-radius: 300px;
+    width: 250px;
+    height: 250px;
+    top: -125px;
+    left: -125px;
+    border-bottom-right-radius: 250px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 .wedding-bg-circle-2 {
-    width: 400px;
-    height: 400px;
-    bottom: -200px;
-    right: -200px;
-    border-top-left-radius: 400px;
+    width: 330px;
+    height: 330px;
+    bottom: -165px;
+    right: -165px;
+    border-top-left-radius: 330px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .wedding-bg-circle-3 {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     top: 25%;
-    right: -100px;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
+    right: -85px;
+    border-top-left-radius: 170px;
+    border-bottom-left-radius: 170px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     background-color: rgba(180, 189, 196, 0.3);
 }
 
 .wedding-bg-circle-4 {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     bottom: 33%;
-    left: -75px;
-    border-top-right-radius: 150px;
-    border-bottom-right-radius: 150px;
+    left: -65px;
+    border-top-right-radius: 130px;
+    border-bottom-right-radius: 130px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: rgba(180, 189, 196, 0.3);
@@ -136,7 +136,7 @@
 
 .wedding-ribbon-decoration {
     position: fixed;
-    width: 100px;
+    width: 70px;
     height: 100vh;
     background-image: linear-gradient(to bottom, transparent, var(--wedding-color-pink-light), transparent);
     z-index: -1;
@@ -153,22 +153,22 @@
 }
 
 .wedding-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 40px 10px;
 }
 
 .wedding-header-container {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     position: relative;
 }
 
 .wedding-section-title {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--wedding-color-dark);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative;
     display: inline-block;
 }
@@ -177,12 +177,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px 0 25px;
+    margin: 10px 0 15px;
 }
 
 .wedding-title-line {
     height: 2px;
-    width: 60px;
+    width: 40px;
     background: linear-gradient(to right, var(--wedding-color-pink), var(--wedding-color-accent2));
 }
 
@@ -191,11 +191,11 @@
     height: 8px;
     border-radius: 50%;
     background-color: var(--wedding-color-accent2);
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .wedding-section-subtitle {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     color: rgba(81, 84, 103, 0.8);
     font-size: 16px;
@@ -204,15 +204,15 @@
 
 .wedding-services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
 .wedding-service-item {
     background-color: white;
-    border-radius: 16px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(193, 205, 207, 0.2);
+    box-shadow: 0 8px 20px rgba(193, 205, 207, 0.15);
     transition: all 0.4s ease;
     border: 1px solid rgba(248, 187, 208, 0.3);
     opacity: 1;
@@ -220,13 +220,13 @@
 }
 
 .wedding-service-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(193, 205, 207, 0.3);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(193, 205, 207, 0.25);
 }
 
 .wedding-service-header {
     background: linear-gradient(to right, var(--wedding-color-accent2), var(--wedding-color-pink-light));
-    padding: 24px;
+    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -248,50 +248,50 @@
 
 .wedding-service-icon {
     background-color: white;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
 }
 
 .wedding-service-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     color: var(--wedding-color-dark);
 }
 
 .wedding-service-price {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--wedding-color-dark);
 }
 
 .wedding-service-content {
-    padding: 24px;
+    padding: 16px;
 }
 
 .wedding-service-content h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--wedding-color-dark);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .wedding-service-title {
     font-weight: 500;
     color: var(--wedding-color-dark);
-    margin-bottom: 12px;
-    font-size: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .wedding-service-description {
     color: rgba(81, 84, 103, 0.8);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.6;
 }
 
@@ -302,28 +302,34 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .wedding-container {
-        padding: 60px 15px;
+        padding: 40px 10px;
     }
+
     .wedding-section-title {
-        font-size: 32px;
+        font-size: 28px;
     }
+
     .wedding-services-list {
         grid-template-columns: 1fr;
     }
+
     .wedding-service-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 10px;
     }
+
     .wedding-service-price {
         align-self: flex-end;
     }
+
     .wedding-bg-circle-1,
     .wedding-bg-circle-2 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
+
     .wedding-ribbon-decoration {
-        width: 50px;
+        width: 30px;
     }
 }

@@ -1,119 +1,101 @@
-.concept-section {
-    color: #333;
-    padding: 60px 20px;
-    font-family: sans-serif;
-    background: url("../assets/images/hero.jpg") center/cover;
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #f0f0f0;
+    --accent-color: #d4af37;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
 }
 
-.concept-section .container {
+.wp-concept-section {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 64px 0;
+}
+
+.wp-concept-header {
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.wp-concept-title {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.wp-concept-subtitle {
+    font-size: 19px;
+    color: var(--secondary-color);
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.concept-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.concept-header p {
-    font-size: 1.5rem;
-}
-
-.steps-grid {
+.wp-concept-steps {
+    max-width: 1400px;
+    margin: 48px auto 0;
+    padding: 0 32px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
 }
 
-.step {
-    background-color: #ffffff75;
-    border-radius: 10px;
-    padding: 30px 20px;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+.wp-concept-step {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 32px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
 
-.step:hover {
+.wp-concept-step:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.step-number {
-    position: absolute;
-    top: -20px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #ffd900af 0%, #ffc107c1 100%);
-    color: #000;
-    border-radius: 50%;
-    font-size: 1.2rem;
+.wp-concept-step-number {
+    font-size: 48px;
+    color: var(--accent-color);
+    margin-bottom: 16px;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.step-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 20px;
-}
-
-.step-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.step-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.wp-concept-step-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 16px;
     font-weight: 600;
-    text-align: center;
-    color: #111;
 }
 
-.step-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-    color: #555;
+.wp-concept-step-description {
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-    .steps-grid {
-        grid-template-columns: 1fr;
+    .wp-concept-section {
+        padding: 32px 0;
     }
 
-    .step {
-        margin-top: 40px;
+    .wp-concept-header,
+    .wp-concept-steps {
+        padding: 0 16px;
     }
 
-    .step-number {
-        left: 20px;
-        top: -25px;
-        width: 45px;
-        height: 45px;
-        font-size: 1rem;
+    .wp-concept-title {
+        font-size: 32px;
     }
 
-    .step-icon {
-        width: 50px;
-        height: 50px;
+    .wp-concept-subtitle {
+        font-size: 16px;
     }
 
-    .step-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .concept-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .concept-header p {
-        font-size: 1rem;
+    .wp-concept-step {
+        padding: 24px;
     }
 }

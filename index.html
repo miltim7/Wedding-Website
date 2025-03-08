@@ -8,7 +8,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=GFS+Didot&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
   <link rel="stylesheet" href="css/font-family.css">
 
@@ -22,6 +28,8 @@
   <link rel="stylesheet" href="css/packages.css">
   <link rel="stylesheet" href="css/contacts.css">
   <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/feedback.css">
   <link rel="stylesheet" href="css/footer.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,12 +39,13 @@
   <header class="fixed-header">
     <div class="header-top">
       <a href="tel:+79690056969" class="phone">
-        Звоните <span>8 969 005 69 69</span>
+        Звоните <span>+7 (969) 005-69-69</span>
       </a>
+      <a class="whatsapp" href="/">Позвонить <img src="assets/images/whatsapp-white.png"></a>
     </div>
     <div class="header-bottom">
       <div class="header-wrap">
-        <img class="logo" src="assets/images/logo.svg" alt="Логотип">
+        <img class="logo" src="assets/images/logo-white.png" alt="Логотип">
         <nav class="desktop-nav">
           <ul>
             <li><a href="#">ОБО МНЕ</a></li>
@@ -49,7 +58,7 @@
           </ul>
         </nav>
         <button class="burger">
-          <img src="assets/icons/menu.png" alt="Меню">
+          <img src="assets/icons/menu-white.png" alt="Меню">
         </button>
       </div>
     </div>
@@ -71,33 +80,31 @@
     </div>
   </div>
 
-  <!-- <div class="hero-section">
+  <section id="hero-section" class="hero">
     <div class="hero-content">
       <div class="hero-text">
-        <h2 class="name">СЕРГЕЙ АГАФОНОВ</h2>
-        <h1 class="profession">ВЕДУЩИЙ</h1>
-        <h2 class="hero-event-type">СВАДЕБНЫХ МЕРОПРИЯТИЙ</h2>
+        <div>
+          <h1 class="hero-name">Сергей Агафонов</h1>
+          <div class="hero-title">
+            <span>ВЕДУЩИЙ</span>
+            <span>СВАДЕБНЫХ МЕРОПРИЯТИЙ</span>
+          </div>
+        </div>
+        <img src="assets/images/kak.jpg" class="pulse-image">
       </div>
-      <div class="hero-image">
-        <img src="assets/images/sergey.png">
-        <button class="cta-button">Узнать, свободна ли дата</button>
-      </div>
+      <a href="#contact" class="cta-button">Узнать, свободна ли дата</a>
     </div>
-  </div> -->
+  </section>
 
-  <!-- <section class="event-section">
-    <h1 class="event-title">ВИДЫ МЕРОПРИЯТИЙ</h1>
-    <div class="event-types">
-        <div class="event-type">Презентации</div>
-        <div class="event-type">Корпоративы</div>
-        <div class="event-type">Тимбилдинги</div>
-        <div class="event-type">Шоу-программы</div>
-        <div class="event-type">Конференции</div>
-        <div class="event-type">Квесты</div>
+  <div id="video-modal" class="video-modal" style="display: none;">
+    <div class="video-modal-content">
+      <span class="close-modal">&times;</span>
+      <video id="modal-video" controls>
+        <source src="assets/video/video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает HTML5 видео.
+      </video>
     </div>
-    <button class="apply-button">ОСТАВИТЬ ЗАЯВКУ</button>
-</section> -->
-
+  </div>
 
   <section class="my-features">
     <div class="container">
@@ -130,6 +137,7 @@
               </div>
             </h3>
             <p>Нажмите, чтобы узнать подробнее обо мне</p>
+
           </div>
           <div class="feature-item">
             <div class="icon">
@@ -153,6 +161,7 @@
           <div class="experience-badge">
             <div class="top"><img src="assets/images/my-features/event-top.svg" alt=""></div>
             <div class="bottom">В EVENT сфере</div>
+            <a href="tel:+79690056969">Проверить, свободна ли дата</a>
           </div>
         </div>
         <div class="column">
@@ -196,245 +205,533 @@
     </div>
   </section>
 
-  <section class="concept-section">
-    <div class="container">
-      <div class="concept-header">
-        <h2>Индивидуальная концепция мероприятия</h2>
-        <p>Сделает ваше событие незабываемым</p>
+  <section class="wp-concept-section">
+    <div class="wp-concept-header">
+      <h1 class="wp-concept-title">Индивидуальная концепция мероприятия</h1>
+      <p class="wp-concept-subtitle">Сделает ваше событие незабываемым</p>
+    </div>
+
+    <div class="wp-concept-steps">
+      <div class="wp-concept-step">
+        <div class="wp-concept-step-number">1</div>
+        <h3 class="wp-concept-step-title">Шаг 1</h3>
+        <p class="wp-concept-step-description">Заполняем и обсуждаем бриф. Знакомимся с концепцией, выделяем ключевые
+          моменты и направление будущего мероприятия.</p>
       </div>
-      <div class="steps-grid">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-icon">
-            <img src="assets/images/concept/contact-form.png" alt="Шаг 1">
-          </div>
-          <div class="step-content">
-            <h3>Заполняем и обсуждаем бриф</h3>
-            <p>Знакомимся с концепцией, выделяем ключевые моменты и направление будущего мероприятия.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-icon">
-            <img src="assets/images/concept/creative.png" alt="Шаг 2">
-          </div>
-          <div class="step-content">
-            <h3>Определяем цели и задачи</h3>
-            <p>Разрабатываем концепцию и формируем ключевые элементы, чтобы добиться нужного результата.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-icon">
-            <img src="assets/images/concept/goal.png" alt="Шаг 3">
-          </div>
-          <div class="step-content">
-            <h3>Визуализируем через презентацию</h3>
-            <p>Готовим наглядные материалы, отражающие все идеи и сценарий будущего события.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-icon">
-            <img src="assets/images/concept/success.png" alt="Шаг 4">
-          </div>
-          <div class="step-content">
-            <h3>Утверждаем и готовимся</h3>
-            <p>Финализируем детали, распределяем роли и делаем все, чтобы ваше мероприятие прошло безупречно.</p>
-          </div>
-        </div>
+
+      <div class="wp-concept-step">
+        <div class="wp-concept-step-number">2</div>
+        <h3 class="wp-concept-step-title">Шаг 2</h3>
+        <p class="wp-concept-step-description">Определяем цели и задачи. Разрабатываем концепцию и формируем ключевые
+          элементы, чтобы добиться нужного результата.</p>
+      </div>
+
+      <div class="wp-concept-step">
+        <div class="wp-concept-step-number">3</div>
+        <h3 class="wp-concept-step-title">Шаг 3</h3>
+        <p class="wp-concept-step-description">Визуализируем через презентацию. Готовим наглядные материалы, отражающие
+          все идеи и сценарий будущего события.</p>
+      </div>
+
+      <div class="wp-concept-step">
+        <div class="wp-concept-step-number">4</div>
+        <h3 class="wp-concept-step-title">Шаг 4</h3>
+        <p class="wp-concept-step-description">Утверждаем и готовимся. Финализируем детали, распределяем роли и делаем
+          все, чтобы ваше мероприятие прошло безупречно.</p>
       </div>
     </div>
   </section>
 
-  <section class="wedding-services-section">
-    <div class="wedding-background-elements">
-      <div class="wedding-bg-circle wedding-bg-circle-1"></div>
-      <div class="wedding-bg-circle wedding-bg-circle-2"></div>
-      <div class="wedding-bg-circle wedding-bg-circle-3"></div>
-      <div class="wedding-bg-circle wedding-bg-circle-4"></div>
+  <section class="wedding-packages">
+    <h2 class="wedding-packages__title">Пакеты</h2>
 
-      <div class="wedding-floating-heart" style="top: 10%; left: 20%;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
-            fill="#f8bbd0" fill-opacity="0.3" />
-        </svg>
-      </div>
-      <div class="wedding-floating-heart" style="top: 15%; right: 25%;">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
-            fill="#f8bbd0" fill-opacity="0.3" />
-        </svg>
-      </div>
-      <div class="wedding-floating-heart" style="bottom: 20%; left: 30%;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
-            fill="#f8bbd0" fill-opacity="0.3" />
-        </svg>
-      </div>
-      <div class="wedding-floating-heart" style="bottom: 35%; right: 15%;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M19.5 12.572L12 20L4.5 12.572C3.5 11.572 3 10.286 3 9C3 6.239 5.239 4 8 4C9.286 4 10.572 4.5 11.572 5.5L12 6L12.428 5.5C13.428 4.5 14.714 4 16 4C18.761 4 21 6.239 21 9C21 10.286 20.5 11.572 19.5 12.572Z"
-            fill="#f8bbd0" fill-opacity="0.3" />
-        </svg>
-      </div>
-
-      <div class="wedding-flower wedding-flower-1"></div>
-      <div class="wedding-flower wedding-flower-2"></div>
-      <div class="wedding-flower wedding-flower-3"></div>
-      <div class="wedding-flower wedding-flower-4"></div>
-    </div>
-
-    <div class="wedding-services-pricing">
-      <div class="wedding-container">
-        <div class="wedding-header-container">
-          <h2 class="wedding-section-title">Стоимость услуг</h2>
-          <div class="wedding-title-decoration">
-            <span class="wedding-title-line"></span>
-            <span class="wedding-title-dot"></span>
-            <span class="wedding-title-line"></span>
-          </div>
-          <p class="wedding-section-subtitle">Создайте незабываемое торжество с нашими профессиональными услугами для
-            вашего особенного дня</p>
-        </div>
-
-        <div class="wedding-services-list" id="wedding-services-list">
-          <!-- Services will be added here by JavaScript -->
-        </div>
-      </div>
-    </div>
-
-    <div class="wedding-ribbon-decoration wedding-ribbon-left"></div>
-    <div class="wedding-ribbon-decoration wedding-ribbon-right"></div>
-  </section>
-
-  <section class="packages-section">
-    <div class="container">
-      <h2>Выберите готовый пакет</h2>
-      <div class="packages-wrap">
-        <div class="package-item">
-          <div class="package-content">
-            <div class="package-header">
-              <h3>Базовый</h3>
-              <div class="price">от 150 000 руб.</div>
+    <div class="wedding-packages__grid">
+      <div class="wedding-package-card" data-id="1">
+        <div class="wedding-package-card__content">
+          <div class="wedding-package-card__header">
+            <h3 class="wedding-package-card__name">ЛАЙТ</h3>
+            <div class="wedding-package-card__duration">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              6 часов
             </div>
-            <ul class="package-list">
-              <li>Ведущий</li>
-              <li>Сценарий и подготовка</li>
-              <li>Фото и видеосъёмка</li>
-              <li>DJ + аппаратура</li>
-              <li>Оформление зала</li>
-              <li>Конкурсы с призами</li>
+          </div>
+          <div class="wedding-package-card__price">от 100.000 руб.</div>
+
+          <ul class="wedding-package-card__features">
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Работа ведущего
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Работа диджея
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Сценарный план
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Интерактивная программа
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Тайминг мероприятия
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Соблюдение дресс-кода
+            </li>
+          </ul>
+        </div>
+
+        <div class="wedding-package-card__additional">
+          <div class="wedding-package-card__additional-content">
+            <h4 class="wedding-package-card__additional-title">Дополнительные услуги:</h4>
+            <ul class="wedding-package-card__additional-list">
+              <li class="wedding-package-card__additional-item">
+                <span>Сценарий свадьбы</span>
+                <span>от 3 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Запись песни молодоженов</span>
+                <span>от 3 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Организация выездной регистрации</span>
+                <span>от 15 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка лав-стори молодоженов</span>
+                <span>от 3 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка welcome-zone</span>
+                <span>от 3 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка девишника</span>
+                <span>от 10 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка мальчишника</span>
+                <span>от 12 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Режиссура свадебного дня</span>
+                <span>от 3 300 руб / час</span>
+              </li>
             </ul>
           </div>
-          <button class="package-btn">Заказать</button>
+
+          <div class="wedding-package-card__footer">
+            <p class="wedding-package-card__note">* Стоимость зависит от даты мероприятия, места проведения, количества
+              гостей.</p>
+            <button class="wedding-package-card__button">РАССЧИТАТЬ СТОИМОСТЬ МЕРОПРИЯТИЯ</button>
+          </div>
         </div>
-        <div class="package-item popular">
-          <span class="popular-badge">Популярный</span>
-          <div class="package-content">
-            <div class="package-header">
-              <h3>Выгодный</h3>
-              <div class="price">от 250 000 руб.</div>
+      </div>
+
+      <div class="wedding-package-card wedding-package-card--popular" data-id="2">
+        <div class="wedding-package-card__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          Популярный
+        </div>
+        <div class="wedding-package-card__content">
+          <div class="wedding-package-card__header">
+            <h3 class="wedding-package-card__name">СТАНДАРТ</h3>
+            <div class="wedding-package-card__duration">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              7 часов
             </div>
-            <ul class="package-list">
-              <li>Ведущий</li>
-              <li>Сценарий и подготовка</li>
-              <li>Фото и видеосъёмка</li>
-              <li>DJ + аппаратура</li>
-              <li>Оформление зала</li>
-              <li>Конкурсы с призами</li>
-              <li>Доп. фишка в подарок</li>
+          </div>
+          <div class="wedding-package-card__price">от 120.000 руб.</div>
+
+          <ul class="wedding-package-card__features">
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              WELLCOME, БАНКЕТ
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Работа ведущего
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Работа диджея
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Сценарный план
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Интерактивная программа
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Тайминг мероприятия
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Соблюдение дресс-кода
+            </li>
+          </ul>
+        </div>
+
+        <div class="wedding-package-card__additional">
+          <div class="wedding-package-card__additional-content">
+            <h4 class="wedding-package-card__additional-title">Дополнительные услуги:</h4>
+            <ul class="wedding-package-card__additional-list">
+              <li class="wedding-package-card__additional-item">
+                <span>Сценарий свадьбы</span>
+                <span>от 3 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Запись песни молодоженов</span>
+                <span>от 3 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Организация выездной регистрации</span>
+                <span>от 15 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка лав-стори молодоженов</span>
+                <span>от 3 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка welcome-zone</span>
+                <span>от 3 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка девишника</span>
+                <span>от 10 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка мальчишника</span>
+                <span>от 12 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Режиссура свадебного дня</span>
+                <span>от 3 300 руб / час</span>
+              </li>
             </ul>
           </div>
-          <button class="package-btn">Заказать</button>
+
+          <div class="wedding-package-card__footer">
+            <p class="wedding-package-card__note">* Стоимость зависит от даты мероприятия, места проведения, количества
+              гостей.</p>
+            <button class="wedding-package-card__button">РАССЧИТАТЬ СТОИМОСТЬ МЕРОПРИЯТИЯ</button>
+          </div>
         </div>
-        <div class="package-item">
-          <div class="package-content">
-            <div class="package-header">
-              <h3>VIP</h3>
-              <div class="price">от 400 000 руб.</div>
+      </div>
+
+      <div class="wedding-package-card" data-id="3">
+        <div class="wedding-package-card__content">
+          <div class="wedding-package-card__header">
+            <h3 class="wedding-package-card__name">ТОП</h3>
+            <div class="wedding-package-card__duration">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              8 часов
             </div>
-            <ul class="package-list">
-              <li>Ведущий</li>
-              <li>Сценарий и подготовка</li>
-              <li>Фото и видеосъёмка</li>
-              <li>DJ + аппаратура</li>
-              <li>Оформление зала</li>
-              <li>Конкурсы с призами</li>
-              <li>Премиум-локация</li>
+          </div>
+          <div class="wedding-package-card__price">от 130.000 руб.</div>
+
+          <ul class="wedding-package-card__features">
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              WELLCOME, ЦЕРЕМОНИЯ, БАНКЕТ
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Работа ведущего
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Работа диджея
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Сценарный план
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Сценарий выездной церемонии
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Музыкальное сопровождение выездной
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Интерактивная программа
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Тайминг мероприятия
+            </li>
+            <li class="wedding-package-card__feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8V4Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Соблюдение дресс-кода
+            </li>
+          </ul>
+        </div>
+
+        <div class="wedding-package-card__additional">
+          <div class="wedding-package-card__additional-content">
+            <h4 class="wedding-package-card__additional-title">Дополнительные услуги:</h4>
+            <ul class="wedding-package-card__additional-list">
+              <li class="wedding-package-card__additional-item">
+                <span>Сценарий свадьбы</span>
+                <span>от 3 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Запись песни молодоженов</span>
+                <span>от 3 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Организация выездной регистрации</span>
+                <span>от 15 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка лав-стори молодоженов</span>
+                <span>от 3 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка welcome-zone</span>
+                <span>от 3 500 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка девишника</span>
+                <span>от 10 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Подготовка мальчишника</span>
+                <span>от 12 000 руб</span>
+              </li>
+              <li class="wedding-package-card__additional-item">
+                <span>Режиссура свадебного дня</span>
+                <span>от 3 300 руб / час</span>
+              </li>
             </ul>
           </div>
-          <button class="package-btn">Заказать</button>
+
+          <div class="wedding-package-card__footer">
+            <p class="wedding-package-card__note">* Стоимость зависит от даты мероприятия, места проведения, количества
+              гостей.</p>
+            <button class="wedding-package-card__button">РАССЧИТАТЬ СТОИМОСТЬ МЕРОПРИЯТИЯ</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="gallery">
-    <div class="matrimony-showcase-container">
-      <h1 class="matrimony-showcase-heading">Фотогалерея</h1>
-      <div class="matrimony-image-slider">
-        <div class="slider-visible-area">
-          <div class="slider-content-strip">
-            <!-- Static photos - add or remove photos here manually -->
-            <div class="slider-image-frame" data-position="0">
-              <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Wedding photo 1">
-            </div>
-            <div class="slider-image-frame" data-position="1">
-              <img
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-                alt="Wedding photo 2">
-            </div>
-            <div class="slider-image-frame" data-position="2">
-              <img
-                src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Wedding photo 3">
-            </div>
-            <div class="slider-image-frame" data-position="3">
-              <img
-                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Wedding photo 4">
-            </div>
-            <div class="slider-image-frame" data-position="4">
-              <img
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Wedding photo 5">
-            </div>
-            <div class="slider-image-frame" data-position="5">
-              <img
-                src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-                alt="Wedding photo 6">
-            </div>
+  <section class="gallery-section">
+    <div class="carousel-container">
+      <h2>Фотогалерея</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img5.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img6.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img7.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img8.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img9.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img10.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img12.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img13.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img14.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img17.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img18.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img19.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img20.jpeg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img21.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img22.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img23.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img24.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img25.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img26.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img27.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img28.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img29.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img30.jpeg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img31.jpeg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img32.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img2.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img3.jpg">
+          </div>
+          <div class="swiper-slide slider-image-frame">
+            <img src="assets/images/gallery/img4.jpg">
           </div>
         </div>
-        <button class="slider-control-button prev-control">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="slider-control-button next-control">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="slider-navigation-dots"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
-
-
 
   <section class="wed-contact-wrapper">
     <div class="wed-paper-card">
       <div class="wed-paper-fold"></div>
-      <div class="wed-wax-seal">
-        <div class="wed-seal-icon" id="ringsIcon"></div>
-      </div>
 
       <div class="wed-card-content">
-        <!-- Left side - Contact Info -->
         <div class="wed-info-side">
           <div class="wed-info-content">
             <div class="wed-brand">
@@ -449,14 +746,14 @@
                   <div class="wed-contact-icon" id="phoneIcon"></div>
                   <div class="wed-contact-details">
                     <div class="wed-contact-label">Телефон</div>
-                    <div class="wed-contact-value">+7 (999) 123-45-67</div>
+                    <div class="wed-contact-value">+7 (969) 005-69-69</div>
                   </div>
                 </li>
                 <li class="wed-contact-item">
                   <div class="wed-contact-icon" id="mailIcon"></div>
                   <div class="wed-contact-details">
                     <div class="wed-contact-label">Email</div>
-                    <div class="wed-contact-value">info@agafonovwedding.ru</div>
+                    <div class="wed-contact-value">agafonovshow@mail.ru</div>
                   </div>
                 </li>
                 <li class="wed-contact-item">
@@ -480,7 +777,6 @@
           </div>
         </div>
 
-        <!-- Right side - Contact Form -->
         <div class="wed-form-side">
           <div class="wed-form-header">
             <h2 class="wed-form-title">Напишите нам</h2>
@@ -540,9 +836,6 @@
       </div>
     </div>
 
-    <div class="wed-flower-decor wed-top-left"></div>
-    <div class="wed-flower-decor wed-bottom-right"></div>
-
     <div id="successMessage" class="wed-success-message">
       <div class="wed-success-content">
         <span class="wed-success-icon" id="checkIcon"></span>
@@ -551,7 +844,239 @@
     </div>
   </section>
 
+  <section class="feedback__section">
+    <div class="feedback__wrapper">
+      <h2 class="feedback__main-title">ОТЗЫВЫ</h2>
+      <div class="feedback__container">
+        <!-- Left Form Section -->
+        <div class="feedback__form-wrapper">
+          <h3 class="feedback__subtitle">Оставьте отзыв</h3>
+          <form class="feedback__form" id="feedbackForm">
+            <div class="feedback__input-group">
+              <input type="text" placeholder="Фамилия и Имя" class="feedback__input">
+            </div>
+            <div class="feedback__input-group">
+              <input type="date" placeholder="Дата свадьбы" class="feedback__input">
+            </div>
+            <div class="feedback__input-group">
+              <label class="feedback__file-input">
+                <input type="file" accept="image/*" class="hidden" id="photoUpload">
+                <div class="feedback__file-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                  <span id="fileNameDisplay">Загрузить фото</span>
+                </div>
+              </label>
+            </div>
+            <div class="feedback__input-group">
+              <textarea placeholder="Сообщение" class="feedback__textarea"></textarea>
+            </div>
+            <button type="submit" class="feedback__submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <span>Отправить</span>
+            </button>
+          </form>
+        </div>
 
+        <!-- Right Slider Section -->
+        <div class="feedback__slider-wrapper">
+          <div class="feedback__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_1.png" alt="Wedding Review 1" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_2.png" alt="Wedding Review 2" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_3.png" alt="Wedding Review 3" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_4.png" alt="Wedding Review 4" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_5.png" alt="Wedding Review 5" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_6.png" alt="Wedding Review 6" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_7.png" alt="Wedding Review 7" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_8.png" alt="Wedding Review 8" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_9.png" alt="Wedding Review 9" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_10.png" alt="Wedding Review 10" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_11.png" alt="Wedding Review 11" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_12.png" alt="Wedding Review 12" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_13.png" alt="Wedding Review 13" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_14.png" alt="Wedding Review 14" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_15.png" alt="Wedding Review 15" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_16.png" alt="Wedding Review 16" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_17.png" alt="Wedding Review 17" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_18.png" alt="Wedding Review 18" class="feedback__review-image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/feedbacks/Screenshot_19.png" alt="Wedding Review 19" class="feedback__review-image">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Часто задаваемые вопросы</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">КАКОЙ У ВАС ОПЫТ РАБОТЫ ВЕДУЩИМ И ЯВЛЯЛЕТСЯ ЛИ ЭТА РАБОТА ДЛЯ ВАС ОСНОВНОЙ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Да, пожалуй, я один из самых опытных современных ведущих. С 2010 года занимаюсь только организацией и
+              проведением мероприятий. Это моя основная, единственная и любимая работа, к которой я отношусь очень
+              ответственно и серьёзно.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ВЫ РАБОТАЕТЕ ПО ДОГОВОРУ? КАК ПРОИЗВОДИТСЯ ОПЛАТА ЗА ВАШИ УСЛУГИ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Да, я работаю по официальному договору. Я индивидуальный предприниматель, и всегда есть возможность
+              провести оплату по данному режиму. Для удобства клиентов я готов к расчетам по системе САМОЗАНЯТОСТЬ или
+              по договору между физическими лицами – выбор всегда за клиентом. Но на все денежные средства, взятые с
+              клиента, я выдаю квитанцию (бланк строгой отчётности).</p>
+            <p>Кстати, если какой-то пункт договора Вас не устраивает, то я всегда готов его с Вами обсудить и по
+              возможности исправить.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ЗА КАКОЕ ВРЕМЯ ДО НАЧАЛА МЕРОПРИЯТИЯ ВЫ ПРИЕЗЖАЕТЕ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Я всегда приезжаю на площадку за 2 часа до начала мероприятия. Исключением являются мероприятия, на
+              которых нужен сложный технический монтаж оборудования или мероприятия, проходящие не в Москве и Московской
+              области.</p>
+            <p>Если мероприятие в другом городе России или за рубежом, то этот вопрос мы обсудим с Вами индивидуально.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">В КАКОМ СТИЛЕ ВЫ ПРОВОДИТЕ МЕРОПРИЯТИЯ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Я бы назвал стиль проведения интеллигентным, современным, тактичным и, конечно же, весёлым. Мероприятие
+              должно получиться комфортным и интересным для каждого, кто будет присутствовать.</p>
+            <p>Я за юмор и за то, чтобы торжество не превратилось в унылые посиделки. А концепция может быть абсолютно
+              любой! Кстати, в моём репертуаре более 500 активностей (интерактивов, флешмобов, челленджей, розыгрышей,
+              видео-фишек, викторин и т.д.), которые использую в своих программах. Я не переодеваю гостей в какие-то
+              костюмы и не устраиваю всякие денежные, алкогольные конкурсы и прочие развлечения.</p>
+            <p>Сейчас индустрия сделала большой шаг вперёд и делать что-то подобное – это уже моветон. Также активно
+              использую различные гаджеты и современные технологии, что положительно оценивается гостями.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">СКОЛЬКО ВРЕМЕНИ РАБОТАЕТЕ НА МЕРОПРИЯТИИ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Классическое время работы на свадьбе – 7 часов. 1 час welcome зона (сбор гостей) и 6 часов банкет. Всегда
+              рекомендую организовывать welcome зону.</p>
+            <p>Если у вас планируется церемония, то время работы составит 8 часов.</p>
+            <p>Если Вас не устраивает данное время, то мы всегда можем договориться. К тому же услуги ведущего и диджея
+              всегда можно продлить на самом мероприятии, но за дополнительную плату.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ВЫ РАБОТАЕТЕ СО СВОИМ ДИДЖЕЕМ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Да, чаще всего я работаю со своей командой ди-джеев.</p>
+            <p>Вы не поверите, но мы сотрудничаем с 2015 года и понимаем друг друга с полуслова, вернее с полувзгляда,
+              да что уж там, с полумысли. Я всегда гарантирую безупречную работу своей команды.</p>
+            <p>Диджей – это не просто человек, включающий разные песни во время дискотеки, диджей – это артист и
+              творческая единица, от работы которого очень многое зависит. Мой диджей всегда красиво и опрятно выглядит
+              и, что очень важно, заряжает позитивной энергетикой абсолютно всех, кто присутствует на мероприятии! Он на
+              протяжении всего праздника работает стоя и сводит треки на DJ-контроллере, делает это очень качественно и
+              драйвово.</p>
+            <p>Диджей прекрасно чувствует настроение публики и очень клиентоориентирован, что немаловажно для данной
+              специфики деятельности.</p>
+            <p>Он озвучивает весь вечер: вовремя и грамотно ставит подложки и отбивки, озвучивает конкурсы и
+              интерактивы, вся фоновая музыка тоже создается именно им, а также полностью поддерживает формат
+              мероприятия. Я бы называл его не диджеем, а музыкальным ведущим вечера. Люблю работать со своими
+              ди-джеями, потому что они полностью отвечают всем моим требованиям и обожают свою работу!</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ВЫ ОБСУЖДАЕТЕ МУЗЫКУ, КОТОРАЯ БУДЕТ ЗВУЧАТЬ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Да, мы составляем не только индивидуальный сценарий для каждого мероприятия, а также и плей-лист.</p>
+            <p>Вы можете просто написать Ваши музыкальные пожелания для дискотеки: что должно прозвучать обязательно и
+              чего точно не должно быть. Или же Вы можете составить полностью плей-лист на всё мероприятие.</p>
+            <p>Если у Вас нет времени для составления плей-листа или не хочется этим заниматься, то уверяю, что у вас
+              будет отличная музыка. Опыт работы и огромная музыкальная база позволяют это делать даже для самой
+              искушенной публики.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ПРОВОДИТЕ ЛИ ВЫ МЕРОПРИЯТИЯ В ДРУГИХ ГОРОДАХ И ЗА РУБЕЖОМ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Да, я работаю в Москве и других уголках России и Мира!</p>
+            <p>Если мероприятие проходит в другом городе или за рубежом и подразумевает перелёт, то дополнительно к
+              гонорару заказчиком оплачивается трансфер, питание и проживание. Это все указано в моем райдере.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ВЫ МОЖЕТЕ ПРОВЕСТИ МЕРОПРИЯТИЕ БЕЗ КОНКУРСОВ / ИНТЕРАКТИВОВ?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Да, я умею проводить мероприятия без конкурсов и интерактивов. Если честно, то это не самая простая
+              задача для ведущего, но мой опыт и знания позволяют это успешно делать. В последнее время таких проектов
+              становится всё больше. Мероприятия получаются современными и интересными с особым наполнением.</p>
+          </div>
+        </div>
+      </div>
+      <a href="#contact" class="faq-button">ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ МНЕ</a>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-wrapper">
@@ -618,7 +1143,7 @@
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                 </path>
               </svg>
-              <span>+7 (999) 123-45-67</span>
+              <span>+7 (969) 005-69-69</span>
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -626,7 +1151,7 @@
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
-              <span>info@agafonovwedding.ru</span>
+              <span>agafonovshow@mail.ru</span>
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -695,7 +1220,12 @@
   <script defer src="js/services.js"></script>
   <script defer src="js/header.js"></script>
   <script defer src="js/contacts.js"></script>
+  <script defer src="js/faq.js"></script>
+  <script defer src="js/feedback.js"></script>
   <script defer src="js/footer.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>
