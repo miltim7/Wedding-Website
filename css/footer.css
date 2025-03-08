@@ -1,19 +1,20 @@
 /* Base styles */
 :root {
-    --dark-blue: #515467;
-    --light-cream: #f4f5ef;
-    --light-gray: #b4bdc4;
-    --light-blue: #c1cdcf;
+    --dark-bg: #121212;
+    --light-text: #f0f0f0;
+    --mid-gray: #333333;
+    --lighter-gray: #444444;
     --font-serif: Georgia, 'Times New Roman', serif;
-    --font-sans: 'Arial', sans-sezrif;
+    --font-sans: 'Arial', sans-serif;
 }
 
 footer {
     line-height: 1.6;
-    background-color: var(--light-cream);
-    border-top: 1px solid var(--light-blue);
+    background-color: var(--dark-bg);
+    border-top: 1px solid var(--mid-gray);
     padding-top: 3rem;
     padding-bottom: 1.5rem;
+    color: var(--light-text);
 }
 
 .footer-wrapper {
@@ -30,13 +31,13 @@ footer {
 
 .footer-title h2 {
     font-family: var(--font-serif);
-    color: var(--dark-blue);
+    color: var(--light-text);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 .footer-title p {
-    color: var(--dark-blue);
+    color: var(--light-text);
     opacity: 0.8;
     font-size: 1.1rem;
 }
@@ -68,7 +69,7 @@ footer {
     transform: translate(-50%, -50%);
     width: 200px;
     height: 1px;
-    background: linear-gradient(to right, transparent, var(--light-blue), transparent);
+    background: linear-gradient(to right, transparent, var(--mid-gray), transparent);
 }
 
 /* Footer content grid */
@@ -94,7 +95,7 @@ footer {
 /* Footer columns */
 .footer-column h3 {
     font-family: var(--font-serif);
-    color: var(--dark-blue);
+    color: var(--light-text);
     font-size: 1.25rem;
     margin-bottom: 1rem;
     font-weight: 500;
@@ -110,13 +111,13 @@ footer {
 }
 
 .footer-column ul li a {
-    color: var(--dark-blue);
+    color: var(--light-text);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
-    color: var(--light-gray);
+    color: var(--lighter-gray);
 }
 
 /* Contact list */
@@ -130,6 +131,7 @@ footer {
     margin-right: 0.5rem;
     margin-top: 0.25rem;
     flex-shrink: 0;
+    fill: var(--light-text);
 }
 
 /* Social media */
@@ -138,7 +140,7 @@ footer {
 }
 
 .social-media h4 {
-    color: var(--dark-blue);
+    color: var(--light-text);
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
@@ -154,27 +156,28 @@ footer {
     justify-content: center;
     width: 36px;
     height: 36px;
-    background-color: var(--light-blue);
+    background-color: var(--mid-gray);
     border-radius: 50%;
     transition: background-color 0.3s;
 }
 
 .social-icon:hover {
-    background-color: var(--light-gray);
+    background-color: var(--lighter-gray);
 }
 
 /* Company info */
 .company-info {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--light-blue);
+    border: 1px solid var(--mid-gray);
 }
 
 .company-info p {
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
+    color: var(--light-text);
 }
 
 .company-info p:last-child {
@@ -184,13 +187,13 @@ footer {
 /* Footer bottom */
 .footer-bottom {
     padding-top: 1.5rem;
-    border-top: 1px solid var(--light-blue);
+    border-top: 1px solid var(--mid-gray);
     text-align: center;
 }
 
 .copyright {
     font-size: 0.875rem;
-    color: var(--dark-blue);
+    color: var(--light-text);
     opacity: 0.8;
 }
 
@@ -207,6 +210,6 @@ footer {
 
 .tagline p {
     font-size: 0.75rem;
-    color: var(--dark-blue);
+    color: var(--light-text);
     opacity: 0.8;
 }
