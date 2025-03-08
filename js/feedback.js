@@ -1,24 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Swiper
-  const swiper = new Swiper('.swiper', {
+  // Initialize Reviews Swiper
+  const reviewsSwiper = new Swiper('.reviews-swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
     speed: 1000,
     effect: 'slide',
-    mousewheel: false,
+    mousewheel: {
+      enabled: true,
+      sensitivity: 1
+    },
     keyboard: {
-        enabled: true
+      enabled: true
     },
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      el: '.reviews-swiper__pagination',
+      clickable: true,
+      dynamicBullets: true,
+      type: 'bullets'
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: '.reviews-swiper__button-next',
+      prevEl: '.reviews-swiper__button-prev'
     },
+    on: {
+      slideChange: function () {
+        this.pagination.update();
+      }
+    }
   });
 
   // Handle file input
